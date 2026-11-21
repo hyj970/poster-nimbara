@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>NIMBARA — The City Above the Clouds</title>
+<style>
+  html, body { margin: 0; padding: 0; width: 1024px; height: 1024px; overflow: hidden; }
+  svg { display: block; width: 1024px; height: 1024px; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#2b1d4e"/>
+      <stop offset="0.34" stop-color="#7a3b63"/>
+      <stop offset="0.58" stop-color="#d96a4a"/>
+      <stop offset="0.78" stop-color="#f2a541"/>
+      <stop offset="1"   stop-color="#f7cf7d"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"   stop-color="#fff3c4" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#ffd76a" stop-opacity="0.55"/>
+      <stop offset="1"   stop-color="#ffd76a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="islandRock" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c4a72"/>
+      <stop offset="1" stop-color="#2e2140"/>
+    </linearGradient>
+    <linearGradient id="waterfall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfeef5" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#8fd0e0" stop-opacity="0.55"/>
+    </linearGradient>
+    <radialGradient id="beaconGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"   stop-color="#fff8d0" stop-opacity="1"/>
+      <stop offset="0.4" stop-color="#ffe27a" stop-opacity="0.75"/>
+      <stop offset="1"   stop-color="#ffe27a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- sky -->
+  <rect x="0" y="0" width="1024" height="1024" fill="url(#sky)"/>
+  <!-- sun -->
+  <circle cx="512" cy="470" r="260" fill="url(#sunGlow)"/>
+  <circle cx="512" cy="470" r="118" fill="#ffe9a8"/>
+  <circle cx="512" cy="470" r="118" fill="none" stroke="#fff3c4" stroke-width="3" opacity="0.8"/>
+
+  <!-- distant small floating islands -->
+  <g>
+    <path d="M120 400 L300 400 L268 452 Q210 470 176 448 Q140 430 120 400 Z" fill="#4a3560"/>
+    <path d="M120 400 L300 400 L292 402 L128 402 Z" fill="#7d9b6a"/>
+    <rect x="150" y="372" width="12" height="28" fill="#3a2a4e"/>
+    <rect x="172" y="380" width="10" height="20" fill="#3a2a4e"/>
+    <rect x="238" y="376" width="12" height="24" fill="#3a2a4e"/>
+    <path d="M742 330 L916 330 L884 384 Q830 402 796 380 Q760 360 742 330 Z" fill="#4a3560"/>
+    <path d="M742 330 L916 330 L908 332 L750 332 Z" fill="#7d9b6a"/>
+    <rect x="782" y="302" width="12" height="28" fill="#3a2a4e"/>
+    <rect x="806" y="310" width="10" height="20" fill="#3a2a4e"/>
+    <rect x="856" y="306" width="12" height="24" fill="#3a2a4e"/>
+  </g>
+
+  <!-- airship -->
+  <g>
+    <ellipse cx="212" cy="252" rx="118" ry="34" fill="#8c2f3c"/>
+    <ellipse cx="212" cy="252" rx="118" ry="34" fill="none" stroke="#f7e3b0" stroke-width="2.5" opacity="0.9"/>
+    <path d="M212 218 L330 252 L212 286 Z" fill="#a8444f"/>
+    <ellipse cx="168" cy="252" rx="26" ry="12" fill="#f7e3b0" opacity="0.9"/>
+    <rect x="188" y="282" width="52" height="16" rx="4" fill="#5c2230"/>
+    <rect x="196" y="298" width="4" height="10" fill="#5c2230"/>
+    <rect x="228" y="298" width="4" height="10" fill="#5c2230"/>
+    <path d="M318 236 L352 214 L352 252 Z" fill="#a8444f"/>
+    <path d="M318 268 L352 290 L352 252 Z" fill="#a8444f"/>
+    <circle cx="300" cy="246" r="4" fill="#ffe9a8"/>
+    <circle cx="272" cy="258" r="4" fill="#ffe9a8"/>
+    <circle cx="244" cy="246" r="4" fill="#ffe9a8"/>
+  </g>
+
+  <!-- main floating island -->
+  <g>
+    <!-- island body -->
+    <path d="M180 560 L844 560 L800 700 Q760 800 640 830 Q540 852 512 900 Q484 852 384 830 Q264 800 224 700 Z" fill="url(#islandRock)"/>
+    <path d="M180 560 L844 560 L836 566 L188 566 Z" fill="#8aa864"/>
+    <path d="M180 560 L844 560 L820 580 L204 580 Z" fill="#6d8a52" opacity="0.85"/>
+    <!-- waterfall from the main island into the clouds (narrowed so the tagline stays clear of it) -->
+    <path d="M488 566 L536 566 L528 756 Q522 796 512 806 Q502 796 496 754 Z" fill="url(#waterfall)"/>
+    <path d="M504 566 L520 566 L516 736 Q514 762 512 768 Q510 762 508 734 Z" fill="#eaf7fa" opacity="0.85"/>
+    <!-- city skyline on the island -->
+    <g fill="#241a38">
+      <rect x="216" y="470" width="46" height="90"/>
+      <rect x="272" y="440" width="38" height="120"/>
+      <rect x="320" y="492" width="52" height="68"/>
+      <rect x="382" y="452" width="40" height="108"/>
+      <rect x="432" y="500" width="44" height="60"/>
+      <rect x="600" y="486" width="48" height="74"/>
+      <rect x="658" y="448" width="42" height="112"/>
+      <rect x="710" y="496" width="46" height="64"/>
+      <rect x="766" y="468" width="40" height="92"/>
+    </g>
+    <!-- lit windows -->
+    <g fill="#ffd76a">
+      <rect x="228" y="490" width="8" height="10"/><rect x="244" y="512" width="8" height="10"/><rect x="228" y="532" width="8" height="10"/>
+      <rect x="282" y="462" width="8" height="10"/><rect x="296" y="486" width="8" height="10"/><rect x="282" y="510" width="8" height="10"/>
+      <rect x="334" y="508" width="8" height="10"/><rect x="352" y="524" width="8" height="10"/>
+      <rect x="392" y="472" width="8" height="10"/><rect x="406" y="496" width="8" height="10"/><rect x="392" y="520" width="8" height="10"/>
+      <rect x="444" y="516" width="8" height="10"/><rect x="460" y="530" width="8" height="10"/>
+      <rect x="612" y="502" width="8" height="10"/><rect x="628" y="522" width="8" height="10"/>
+      <rect x="668" y="468" width="8" height="10"/><rect x="684" y="492" width="8" height="10"/><rect x="668" y="516" width="8" height="10"/>
+      <rect x="722" y="512" width="8" height="10"/><rect x="738" y="528" width="8" height="10"/>
+      <rect x="776" y="486" width="8" height="10"/><rect x="790" y="510" width="8" height="10"/>
+    </g>
+    <!-- Beacon Tower -->
+    <g>
+      <circle cx="538" cy="330" r="120" fill="url(#beaconGlow)"/>
+      <path d="M522 560 L554 560 L548 380 L528 380 Z" fill="#f7e3b0"/>
+      <path d="M528 380 L548 380 L544 330 L532 330 Z" fill="#e8c87a"/>
+      <circle cx="538" cy="312" r="26" fill="#fff3c4"/>
+      <circle cx="538" cy="312" r="26" fill="none" stroke="#ffd76a" stroke-width="3"/>
+      <path d="M538 276 L538 262 M514 296 L502 288 M562 296 L574 288" stroke="#ffe9a8" stroke-width="4" stroke-linecap="round"/>
+      <rect x="514" y="536" width="48" height="24" fill="#c9a45e"/>
+    </g>
+    <!-- trees on the island -->
+    <g fill="#5d7a44">
+      <circle cx="300" cy="548" r="14"/><circle cx="330" cy="552" r="11"/>
+      <circle cx="700" cy="548" r="14"/><circle cx="730" cy="552" r="11"/>
+      <circle cx="430" cy="552" r="10"/><circle cx="610" cy="552" r="10"/>
+    </g>
+  </g>
+
+  <!-- sea of clouds -->
+  <g>
+    <g fill="#fbeed3" opacity="0.95">
+      <ellipse cx="150" cy="880" rx="210" ry="64"/>
+      <ellipse cx="420" cy="920" rx="260" ry="76"/>
+      <ellipse cx="760" cy="890" rx="240" ry="70"/>
+      <ellipse cx="950" cy="940" rx="180" ry="60"/>
+    </g>
+    <g fill="#f3d9a8" opacity="0.9">
+      <ellipse cx="300" cy="950" rx="230" ry="58"/>
+      <ellipse cx="640" cy="972" rx="260" ry="56"/>
+      <ellipse cx="60" cy="968" rx="160" ry="52"/>
+    </g>
+    <g fill="#fff8e6">
+      <ellipse cx="210" cy="852" rx="120" ry="34"/>
+      <ellipse cx="560" cy="868" rx="140" ry="36"/>
+      <ellipse cx="840" cy="846" rx="110" ry="30"/>
+    </g>
+  </g>
+
+  <!-- inner frame -->
+  <rect x="26" y="26" width="972" height="972" fill="none" stroke="#f7e3b0" stroke-width="4"/>
+  <rect x="38" y="38" width="948" height="948" fill="none" stroke="#f7e3b0" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- title block -->
+  <text x="512" y="148" text-anchor="middle" font-family="'Noto Serif Display', 'DejaVu Serif', serif" font-weight="900" font-size="132" letter-spacing="14" fill="#fdf3d0">NIMBARA</text>
+  <!-- subtitle with rules that STOP short of the text (never crossing it) -->
+  <g stroke="#f7cf7d" stroke-width="2.5">
+    <line x1="140" y1="196" x2="196" y2="196"/>
+    <line x1="828" y1="196" x2="884" y2="196"/>
+  </g>
+  <circle cx="208" cy="196" r="4" fill="#f7cf7d"/>
+  <circle cx="816" cy="196" r="4" fill="#f7cf7d"/>
+  <text x="512" y="206" text-anchor="middle" font-family="'Noto Serif Display', 'DejaVu Serif', serif" font-weight="600" font-size="27" letter-spacing="7" fill="#ffe9a8">THE CITY ABOVE THE CLOUDS</text>
+
+  <!-- tagline (dark halo so it stays legible where it crosses the waterfall) -->
+  <text x="512" y="726" text-anchor="middle" font-family="'Noto Serif Display', 'DejaVu Serif', serif" font-style="italic" font-weight="600" font-size="34" letter-spacing="2" fill="#fff8e6" stroke="#2e2140" stroke-width="5" paint-order="stroke">Where the clouds come to rest</text>
+
+  <!-- bottom footer band, clear of the inner frame (frame at y=986) -->
+  <rect x="46" y="912" width="932" height="54" fill="#2e2140" opacity="0.94"/>
+  <text x="512" y="947" text-anchor="middle" font-family="'Noto Serif Display', 'DejaVu Serif', serif" font-weight="600" font-size="19" letter-spacing="3" fill="#f7e3b0">DAILY AIRSHIP SERVICE FROM THE VALLEY · EST. 1927</text>
+</svg>
+</body>
+</html>
